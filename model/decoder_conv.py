@@ -485,6 +485,8 @@ class ConvBlock(object):
           initializer=tf.zeros_initializer())
 
       assert len(input_shape) == 3
+      if input_shape[0] is None:
+        input_shape = tf.shape(inputs)
       inputs = tf.reshape(inputs, [-1, input_shape[-1]])
       inputs = tf.matmul(inputs, V)
       inputs = tf.reshape(inputs, [input_shape[0], -1, out_dim])
