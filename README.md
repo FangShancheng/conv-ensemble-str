@@ -30,22 +30,22 @@ python demo.py --path=data/demo.jpg --checkpoint=PATH_TO_PRETRAINED_MODEL
 
 1. Prepare training dataset.
 
-Prepare training datasets into tfrecord format. You can customize your datasets based our tfrecord tool under `tools/make_tfrecord_datasets.py`.
+    Prepare training datasets into tfrecord format. You can customize your datasets based our tfrecord tool under `tools/make_tfrecord_datasets.py`.
 
 2. Start training.
 
-- Train from scratch.
-```
-./train.sh
-```
+    - Train from scratch.
+    ```
+    ./train.sh
+    ```
 
-- Or use the pretrained model by adding an additional flag: `--checkpoint=--checkpoint=PATH_TO_PRETRAINED_MODEL`
+    - Or use the pretrained model by adding an additional flag: `--checkpoint=--checkpoint=PATH_TO_PRETRAINED_MODEL`
 
-1. Evaluate the model continuously during training.
+3. Evaluate the model continuously during training.
 
-```
-./eval_continous.sh
-```
+    ```
+    ./eval_continous.sh
+    ```
 
 
 ### Citation
