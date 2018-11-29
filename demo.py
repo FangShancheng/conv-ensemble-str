@@ -53,7 +53,7 @@ def main():
 
   assert os.path.exists(args.path), '%s does not exists!' % args.path
   raw_image = Image.open(args.path).convert('RGB')
-  raw_image = raw_image.resize((100, 32))
+  raw_image = raw_image.resize((100, 32), Image.BILINEAR)
   raw_image = np.array(raw_image)[None, :]
 
   with tf.Session() as sess:
